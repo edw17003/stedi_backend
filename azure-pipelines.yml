@@ -1,4 +1,10 @@
 # Docker
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'azure-pipelines-cicd-dev'
+    namespace: 'default'
+    manifests: '/stedi-private-main/dev.yml'
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
